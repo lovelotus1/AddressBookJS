@@ -162,3 +162,6 @@ else if(count>1)
 {
     console.log("There is duplicate entry for the given name")
 }
+//UC8-Getting person's name from a city/state
+let peopleFromCity=addressArr.filter(a=>a.city.includes("Surat"));
+console.log("People from the given city are: "+peopleFromCity);
