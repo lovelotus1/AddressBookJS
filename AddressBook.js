@@ -166,7 +166,7 @@ else if(count>1)
 let peopleFromCity=addressArr.filter(a=>a.city.includes("Surat"));
 console.log("People from the given city are: "+peopleFromCity);
 
-//UC9-Viewing person by city/state
+/*//UC9-Viewing person by city/state
 function ReturnCityMap(a)
 {
     return a.city+ "->"+a.firstName;
@@ -174,10 +174,20 @@ function ReturnCityMap(a)
 
 let addressCityMap= addressArr.map(ReturnCityMap);
 console.log("Viewing the people by their city")
-console.log(addressCityMap);
+console.log(addressCityMap);*/
 //UC10-Getting count of people living in a city/state
 console.log("Number of people from that city is: "+peopleFromCity.length);
 
-//UC11-Sorting the address book according to person's name
+/*//UC11-Sorting the address book according to person's name
 let sortedArray = addressArr.sort(a=>a.firstName);
-console.log(sortedArray);
+console.log(sortedArray);*/
+
+//UC12 -Sorting the address book according to city,state or zip
+let sortedArray_state= addressArr.sort((a,b)=>a.state.localeCompare(b.state));
+console.log(sortedArray_state);
+
+let sortedArray_city = addressArr.sort((a,b)=>a.city.localeCompare(b.city));
+console.log(sortedArray_city);
+
+let sortedArray_zip = addressArr.sort((a,b)=>(a.zip>b.zip)?1:(b.zip>a.zip)?-1:0);
+console.log(sortedArray_zip);
