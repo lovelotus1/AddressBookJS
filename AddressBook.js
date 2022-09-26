@@ -118,3 +118,11 @@ try
 catch(e)
 {
 }
+//UC-4
+
+function SearchName(addressbook)
+{
+    if(addressbook.firstName=="Amit") return addressbook;
+}
+let searchResult =addressArr.find(SearchName);
+console.log("Result after searching "+searchResult);
