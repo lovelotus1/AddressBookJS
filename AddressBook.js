@@ -118,7 +118,7 @@ try
 catch(e)
 {
 }
-//UC-4
+/*//UC-4
 
 function SearchName(addressbook)
 {
@@ -134,7 +134,7 @@ function DeleteAddress(addressbook){
     return index;
 }
 let deleteIndex=addressArr.find(DeleteAddress);
-console.log(addressArr.splice(deleteIndex,3)+" is deleted")
+console.log(addressArr.splice(deleteIndex,3)+" is deleted")*/
 
 //UC6-Getting count of total address 
 let n=0;
@@ -145,3 +145,20 @@ function GetTotal(a){
    return n;
 }
 console.log("Total count of addresses "+addressArr.reduce(GetTotal,0));
+
+//UC7-Checking for duplicate entries
+function CheckDuplicate(a)
+{
+    if(a.firstName.includes("Patel"))
+    ++n;
+return n;
+}
+let count = addressArr.filter(CheckDuplicate);
+if(count=1)
+{
+    console.log("There is no duplicate entry for the name");
+}
+else if(count>1)
+{
+    console.log("There is duplicate entry for the given name")
+}
